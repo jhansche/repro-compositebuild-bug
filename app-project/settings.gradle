@@ -1,0 +1,6 @@
+include ':app'
+
+if (hasProperty('libPath')) {
+    println "Using libpath: ${getProperty('libPath')}"
+    includeBuild(getProperty('libPath'))
+}
